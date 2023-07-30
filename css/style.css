@@ -333,7 +333,7 @@ select {
     height: 2.5rem;
     background: var(--white-color);
     box-shadow: var(--shadow);
-    overflow: hidden;
+    overflow: hidden !important;
     display: flex;
     align-items: center;
     z-index: 111;
@@ -369,6 +369,7 @@ select {
     background-color: var(--light-bg-color);
     z-index: 100;
     border-radius: .4rem;
+    overflow: hidden;
 }
 .login-form h3 {
     margin: 0 0 2rem;
@@ -620,6 +621,9 @@ select {
     position: relative;
     border-radius: .4rem;
   }
+  .swiper-slide:hover {
+    border: .15rem solid var(--light-bg-color);
+  }
 
   .swiper-slide img {
     display: inline-block;
@@ -701,3 +705,48 @@ select {
     background: var(--light-text-color);
     color: var(--dark-color);
   }
+
+  /*=======================
+    tranding product
+=========================*/
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.products-container .box {
+    text-align: center;
+    font-size: 18px;
+    background: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem;
+    border: .15rem solid var(--primary-color);
+    border-radius: .4rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+.products-container .box:hover {
+    border: .15rem solid var(--light-bg-color);
+}
+.products-container .box img {
+    display: block;
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+.products-container .box span:hover {
+    background: var(--secondary-color);
+}
+.products-container .box:hover .swiper-overlay {
+    top: 0;
+}
+.products-container .box:hover h5 {
+    color: var(--secondary-color);
+}
