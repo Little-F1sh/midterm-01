@@ -148,6 +148,7 @@ select {
 }
 .title {
     text-align: center;
+    margin-top: 2rem;
 }
 .title h2 {
     font-size: 2rem;
@@ -600,6 +601,9 @@ select {
 /*=======================
         shop
 =========================*/
+.shop-container {
+    margin-top: 2rem;
+}
 
 .swiper {
     width: 100%;
@@ -633,8 +637,8 @@ select {
     align-items: center;
     margin-bottom: 2rem;
   }
-  .swiper-slide {
-    font-size: .77rem;
+  .swiper-slide h4 {
+    text-transform: capitalize;
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -690,6 +694,7 @@ select {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     background: var(--light-bg-color);
+    margin-top: 5rem;
   }
   .feature-banner .box {
     display: flex;
@@ -714,6 +719,7 @@ select {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    margin-top: 2rem;
 }
 .products-container .box {
     text-align: center;
@@ -733,6 +739,7 @@ select {
 }
 .products-container .box:hover {
     border: .15rem solid var(--light-bg-color);
+    cursor: pointer;
 }
 .products-container .box img {
     display: block;
@@ -741,11 +748,17 @@ select {
     object-fit: cover;
     margin-bottom: 2rem;
 }
+.products-container .box span {
+    font-weight: var(--fw6);
+}
 .products-container .box span:hover {
     background: var(--secondary-color);
 }
 .products-container .box:hover .swiper-overlay {
     top: 0;
+}
+.products-container .box h5 {
+    text-transform: capitalize;
 }
 .products-container .box:hover h5 {
     color: var(--secondary-color);
