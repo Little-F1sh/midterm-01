@@ -680,5 +680,24 @@ select {
   .swiper-overlay .lnr {
     color: var(--white-color);
     font-size: 1.2rem;
-
+  }
+  .feature-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    background: var(--light-bg-color);
+  }
+  .feature-banner .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem .5rem;
+  }
+  .feature-banner .lnr {
+    font-size: 2.8rem;
+  }
+  .feature-banner .box.blue {
+    background: var(--light-text-color);
+    color: var(--dark-color);
   }
