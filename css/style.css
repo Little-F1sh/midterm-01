@@ -6,8 +6,8 @@
     --secondary-dark-color: #25242a;
 
     --white-color: #ffffff;
-    --light-bg-color: #f2f3f5;
-    --light-text-color: #6a88af;
+    --light-bg-color: #dadde5;
+    --light-text-color: #7f94b0;
     --border-color: #e5e8ec;
     --dark-color: #0a021c;
 
@@ -43,7 +43,7 @@
     box-sizing: border-box;
     outline: none;
     resize: none;
-    
+
 }
 
 *,::before::after {
@@ -135,6 +135,10 @@ section h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
+select {
+    border: none;
+    border-radius: 5px;
+}
 /* ==================
     Navbar Section
 =================== */
@@ -199,9 +203,10 @@ section h2 {
     justify-content: space-between;
 }
 .logo {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: var(--fw8);
-    color: var(--dark-color);  
+    color: var(--dark-color);
+    text-decoration: none;  
 }
 .logo span {
     color: var(--secondary-color);
@@ -212,31 +217,251 @@ section h2 {
     display: flex;
     gap: 2rem;
     text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+}
+.navlist li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1rem;
+    font-weight: var(--fw6);
 }
 .navlist li {
     padding: 1.5rem 0;
     position: relative;
     cursor: pointer;
 }
-.navlist li:hover a{
+.navlist  li:hover a{
     color: var(--secondary-color);
 }
 .navlist .submenu{
-    border-left: .2rem solid var(--border-color);
+    border-left: 5px solid var(--secondary-color);
     position: absolute;
     top: 7rem;
     left: 0;
-    background: var(--primary-color);
+    background: var(--white-color);
     width: 11rem;
     transition: var(--transition);
     visibility: hidden;
     opacity: 0;
+    padding: 0;
+    text-align: center;
 }
 .navlist li:hover .submenu {
-    top: 4.9rem;
+    top: 4.7rem;
     visibility: visible;
     opacity: 1;
+    z-index: 1;
 }
 .navlist .submenu li {
     padding-left: .5rem;
+}
+.navlist .submenu li:hover {
+    background: var(--secondary-color);
+}
+.navlist .submenu li:hover a {
+    color: var(--white-color);
+}
+.mn-container .mn-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    position: relative;
+}
+.lnr-menu {
+    font-size: 1.4rem;
+    visibility: hidden;
+}
+.mn-btns .lnr {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mn-btns .lnr.active {
+    background-color: var(--light-bg-color);
+}
+.checkout-items {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -.3rem;
+    right: -.3rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: var(--light-text-color);
+    font-size: 12px;
+    color: var(--white-color) ;
+}
+.search-form{
+    position: absolute;
+    top: 12%;
+    right: -115%;
+    width:18rem;
+    height: 2.5rem;
+    background: var(--white-color);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 111;
+}
+.search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    color: var(--white-color);
+    padding: 0 1rem;
+    border-radius: .4rem;
+}
+.search-form label {
+    padding-right: 1rem;
+    cursor: pointer;
+}
+.search-form label:hover {
+    color: var(--secondary-color);
+}
+.search-form.active {
+    right: 10%;
+    transition: var(--transition);
+}
+.login-form {
+    position: absolute;
+    top: 17%;
+    right: -110%;
+    width: 20rem;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--light-bg-color);
+    z-index: 100;
+    border-radius: .4rem;
+}
+.login-form h3 {
+    margin: 0 0 2rem;
+    text-transform: uppercase;
+}
+.login-form input {
+    background: var(--primary-color);
+    padding: .5rem 1rem;
+    margin: .2rem 0;
+    height: 100%;
+    width: 100%;
+    border-radius: .4rem;
+}
+.login-form a {
+    display: flex;
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: var(--fw5);
+} 
+.login-form a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+.login-form .btn {
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+    width: var(--percent50);
+    border: 2px solid var(--border-color);
+    color: var(--white-color);
+}
+.login-form input [type = 'password'] {
+    margin-bottom: .5rem;
+}
+.login-form.active {
+    right: 10%;
+    transition: var(--transition);
+}
+.cart-box {
+    position: absolute;
+    top: 17%;
+    right: -110%;
+    width: 17rem;
+    text-align: center;
+    box-sizing: var(--shadow);
+    background: var(--light-bg-color);
+    z-index: 100;
+    border-radius: .4rem;
+}
+.cart-box .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;;
+    border-radius: .2rem;
+    position: relative;
+
+}
+.cart-box img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: .5rem;
+}
+.cart-box .box > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+.cart-box .box > div span {
+   font-weight: var(--fw5);
+   font-size: .85rem; 
+}
+.cart-box h3 {
+    margin: 1.1rem;
+    text-transform: uppercase;
+}
+.cart-box div h5 {
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+.cart-box div select {
+    width: 4.4rem;
+    background: none;
+    color: var(--dark-color);
+    border-left: .1rem solid var(--dark-color);
+    border-radius: none;
+}
+.cart-box .total {
+    margin: 1rem 0;
+}
+.cart-box .cart-btns {
+    display: flex;
+}
+.cart-box .c-btn {
+    display: inline-block;
+    width: var(--percent50);
+    border-radius: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: .6rem;
+    font-weight: var(--fw7);
+    margin-top: var(--light-bg-color);
+    background: var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    border: .1rem solid transparent;
+}
+.cart-box .c-btn.active {
+    color: var(--dark-color);
+    background: var(--light-bg-color);
+    border: .1rem solid var(--dark-color);
+}
+.cart-box .c-btn:hover {
+    letter-spacing: .03rem;
+}
+.cart-box .lnr-trash:hover {
+    color: var(--secondary-color);
+}
+.cart-box.active {
+    right: 10%;
+    transition: var(--transition);
 }
