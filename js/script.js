@@ -24,10 +24,10 @@ cartBtn.onclick = function() {
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3500,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

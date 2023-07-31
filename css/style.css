@@ -902,7 +902,9 @@ select {
 /*=======================
         Contact
 =========================*/
-
+.contact {
+    margin-bottom: 2rem;
+}
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -968,7 +970,6 @@ select {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 1rem;
 }
 .about-btn {
     position: absolute;
@@ -996,7 +997,120 @@ select {
 }
 .about-image a img {
     width: 100%;
-    height: 300px;
     transition: var(--transition);
+}
+.about-image a:hover img {
+    transform: scale(1.05);
+}
+
+/*=======================
+        Footer
+=========================*/
+.footer {
+    background-color: var(--light-text-color);
+    padding-top: 55px;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.footer-container h4 {
+    text-transform: capitalize;
+}
+.f-about {
+    color: var(--dark-color);
+}
+.footer h4 {
+    color: var(--dark-color);
+    font-size: 18px;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+    margin-bottom: 44px;
+}
+.f-about img {
+    width: 11rem;
+    padding-top: 1rem;
+}
+.footer-widget {
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+.footer-widget p {
+    color: var(--light-bg-color);
+    margin-bottom: 2rem;
+}
+.footer-widget ul {
+    float: left;
+    margin-right: 35px;
+}
+.footer-widget ul li a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--dark-color);
+    padding-left: 20px;
+    margin-bottom: 11px;
+    font-size: 15px;
+}
+.footer-widget ul li a::after  {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid var(--dark-color);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+.footer-widget ul li a:hover::after  {
+    background: var(--white-color);
+}
+.footer-widget ul li a:hover  {
+    color: var(--white-color);
+}
+.footer-widget ul:last-child {
+    margin-right: 0;
+}
+.posts .lp-item {
+    margin-bottom: 30px;
     display: block;
+    overflow: hidden;
+}
+.posts .lp-item img {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin-right: 22px;
+}
+.posts .lp-content {
+    overflow: hidden;
+    padding-top: .08rem;
+}
+.posts .lp-content h6 {
+    font-size: 1rem;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+    opacity: 0.45;
+    color: var(--dark-color);
+    margin-bottom: .1rem;
+}
+.posts .lp-content span {
+    display: block;
+    font-size: .12px;
+    font-weight: var(--fw6);
+    color: var(--dark-color);
+    margin-bottom: 4px;
+}
+.posts .lp-content .readmore {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--dark-color);
+}
+.con-info span {
+    float: left;
+    color: var(--dark-color);
+    margin-right: 15px;
+    overflow: hidden;
 }
