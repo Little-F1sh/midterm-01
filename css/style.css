@@ -118,9 +118,9 @@ h4 {
     margin: 0 auto;
     width: 1290px;
 }
-.container-nav {
-    width: 800px !important;
-    margin: auto !important;
+container-nav {
+    width: 800px;
+    margin: auto;
 }
 section {
     padding: 5rem 0 0;
@@ -191,25 +191,40 @@ select {
     transition: .06s;
     z-index: 1000;
 }
-.tn-container.info {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2rem;
+.tn-container .info a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+.tn-container .info a:hover,
+.tn-container .info span:hover {
+    color: var(--secondary-color);
 }
 .tn-container .info span {
     display: inline-block;
     align-items: center;
     gap: .5rem;
-    font-size: var(--font-small);
+    font-size: 1.2rem;
     font-weight: var(--fw5);
 }
-.tn-container .lnr,
-.tn-container i {
+.tn-container .lnr {
     color: var(--white-color);
 }
 .tn-btns {
     display: flex;
     gap: .5rem;
+
+}
+.tn-btns a {
+    padding-right: 5px;
+    border-right: 1px solid var(--white-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: var(--fw5);
+    text-transform: uppercase;
+}
+.tn-btns a span {
+    font-size: 1.2rem;
+    font-weight: var(--fw5);
 }
 .tn-btns a, .tn-btns div {
     display: flex;
@@ -222,9 +237,6 @@ select {
 }
 .tn-btns a:hover {
     color: var(--secondary-color);
-}
-.tn-btns i {
-    font-size: 1rem;
 }
 .tn-btns #currency-select {
     background: var(--dark-color);
@@ -247,7 +259,7 @@ select {
     z-index: 1000;
 }
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: var(--fw8);
     color: var(--dark-color);
     text-decoration: none;  
@@ -269,8 +281,9 @@ select {
 .navlist li a {
     text-decoration: none;
     color: var(--dark-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: var(--fw6);
+    gap: .5rem;
 }
 .navlist li {
     padding: 1.5rem 0;
@@ -318,6 +331,9 @@ select {
 .lnr-menu {
     font-size: 1.4rem;
     visibility: hidden;
+}
+.mn-btns span {
+    font-size: 1rem;
 }
 .mn-btns .lnr {
     height: 2.5rem;
