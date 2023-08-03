@@ -66,6 +66,78 @@ var swiper = new Swiper(".mySwiper", {
         title: 'shirt',
         price: 29.99
     },
+    {
+        id: 0,
+        image: 'images/c_formal_gray_shirt.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 1,
+        image: 'images/c_pant_girl.png',
+        title: 'pant',
+        price: 29.99
+    },
+    {
+        id: 2,
+        image: 'images/c_polo-shirt.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 3,
+        image: 'images/c_shirt-girl.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 0,
+        image: 'images/c_formal_gray_shirt.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 1,
+        image: 'images/c_pant_girl.png',
+        title: 'pant',
+        price: 29.99
+    },
+    {
+        id: 2,
+        image: 'images/c_polo-shirt.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 3,
+        image: 'images/c_shirt-girl.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 0,
+        image: 'images/c_formal_gray_shirt.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 1,
+        image: 'images/c_pant_girl.png',
+        title: 'pant',
+        price: 29.99
+    },
+    {
+        id: 2,
+        image: 'images/c_polo-shirt.png',
+        title: 'shirt',
+        price: 29.99
+    },
+    {
+        id: 3,
+        image: 'images/c_shirt-girl.png',
+        title: 'shirt',
+        price: 29.99
+    },
 ];
 
 // Get unique product titles to use for search filtering
