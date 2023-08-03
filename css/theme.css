@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/*Login*/
+
+.facebook {
+    font-weight: bold;
+    font-size: 3.5em;
+    font-family: "Poppins", sans-serif;
+   
+}
+.logo {
+    color: coral;
+}
+
+.text-description {
+    font-weight: normal;
+    font-size: 1.4em;
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-gray {
+    background-color: #f0f2f5;
+}
+
+.btn-primary {
+    background-color: coral !important;
+}
+
+.btn-success {
+    background-color: #42b72a !important;
+}
+
+input::placeholder {
+    color: rgb(190, 186, 186) !important;
+    font-size: 0.8em;
+
+}
+
+.btn-h-primary:hover {
+    background-color: coral !important;
+}
+
+.btn-h-success:hover {
+    background-color: #309f1a !important;
+}

@@ -1,45 +1,27 @@
-/*================ Navbar section ===================*/
+const showapi  = () =>{
+    
+    const axios = require("axios");
 
+const encodedParams = new URLSearchParams();
+encodedParams.append("apiKey", "<REQUIRED>");
 
-/*================ Slider ===================*/ 
+const options = {
+  method: 'POST',
+  url: 'https://bestbuyraygorodskijv1.p.rapidapi.com/getAllCategories',
+  headers: {
+    'content-type': 'application/x-www-form-urlencoded',
+    'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+    'X-RapidAPI-Host': 'BestBuyraygorodskijV1.p.rapidapi.com'
+  },
+  data: encodedParams
+};
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        0:{
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },        
-        640:{
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        824:{
-            slidesPerView: 3,
-            spaceBetween: 40,
-        },
-        1024:{
-            slidesPerView: 4,
-            spaceBetween: 30,
-        },
-        1324:{
-            slidesPerView: 5,
-            spaceBetween: 30,
-        },
-    },
-  });
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+}
 
   const products = [
     {
@@ -139,56 +121,3 @@ var swiper = new Swiper(".mySwiper", {
         price: 29.99
     },
 ];
-
-// Get unique product titles to use for search filtering
-const categories = [...new Set(products.map(item => item.title))];
-
-document.getElementById('searchbar').addEventListener('keyup', (e) => {
-    const searchData = e.target.value.toLowerCase();
-    const filterData = products.filter((item) => {
-        return item.title.toLowerCase().includes(searchData);
-    });
-    displayItem(filterData);
-});
-
-const displayItem = (items) => {
-    document.getElementById('products').innerHTML = items.map((item) => {
-        var { id, image, title, price } = item;
-        return (
-            `<div class='box'>
-                <img class='images' src=${image}></img>
-                <h5>${title}</h5>
-                <span>${price}.00</span>
-                <button onclick="addToCart(${id})">Add to Cart</button>
-            </div>`
-        );
-    }).join('');
-};
-
-// Initially display all products
-displayItem(products);
-
-const cartItems = [];
-
-// Function to add items to the cart
-const addToCart = (productId) => {
-    const selectedProduct = products.find(item => item.id === productId);
-    if (selectedProduct) {
-        cartItems.push(selectedProduct);
-        displayCart();
-    }
-};
-
-// Function to display cart items
-const displayCart = () => {
-    document.getElementById('cart').innerHTML = cartItems.map((item) => {
-        var { id, image, title, price } = item;
-        return (
-            `<div class='box'>
-                <img class='images' src=${image}></img>
-                <h5>${title}</h5>
-                <span>${price}.00</span>
-            </div>`
-        );
-    }).join('');
-};
