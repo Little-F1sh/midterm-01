@@ -351,16 +351,34 @@ select {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: -.3rem;
-    right: -.3rem;
+    top: -.0rem;
+    right: -.0rem;
     height: 1rem;
     width: 1rem;
     border-radius: 50%;
     background-color: var(--light-text-color);
     font-size: 12px;
     color: var(--white-color) ;
+    text-align: center;
 }
+.searchbar {
+    width: 70%;
+    background-color: var(--white-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchbar input {
+    border: none;
+    outline:none;
+    background: none;
 
+}
+.searchbar .lnr:hover {
+    color: var(--primary-color);
+}
 /*=======================
             Home
 =========================*/
